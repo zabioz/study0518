@@ -1,0 +1,17 @@
+<%= form_for(hp) do |f| %>
+  <% if hp.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(hp.errors.count, "error") %> prohibited this hp from being saved:</h2>
+
+      <ul>
+      <% hp.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
